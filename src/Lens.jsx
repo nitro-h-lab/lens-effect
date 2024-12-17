@@ -33,7 +33,7 @@ export function Lens({ children, damping = 0.14, ...props }) {
     // a plane spanning the full screen and the lens transmission material
     state.gl.setRenderTarget(buffer);
     // state.gl.setClearColor("#ecedef");
-    state.gl.setClearColor("white");
+    state.gl.setClearColor("#E8EFED");
     state.gl.render(scene, state.camera);
     state.gl.setRenderTarget(null);
   });
