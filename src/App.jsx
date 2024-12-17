@@ -21,7 +21,7 @@ export default function App() {
   return (
     // We attach events onparent div in order to get events on both canvas and DOM
     <div ref={eventSource}>
-      <CodropsFrame />
+      {/* <CodropsFrame /> */}
       <GlobalCanvas
         // shader errors are hidden by default which speeds up compilation
         debug={false}
@@ -36,7 +36,7 @@ export default function App() {
       >
         {(globalChildren) => (
           <Lens>
-            <WebGLBackground />
+            {/* <WebGLBackground /> */}
             <Suspense fallback="">
               {/* 
                 Our materials use PBR ligting and requires an environment
@@ -52,23 +52,33 @@ export default function App() {
         config={{ syncTouch: true }} // Lenis setting to force smooth scroll on touch devices
       />
       <article>
-        <EffectsToggle setEnabled={setEnabled} enabled={enabled} />
         <header className="container">
           <div className="headerLayout">
             <h2>
               <Headline wobble>
-                RESPONSIVE {enabled ? "WEBGL" : "HTML"}
+                What we build, nature redefines.
+                {/* {enabled ? "WEBGL" : "HTML"} */}
               </Headline>
             </h2>
             <BodyCopy as="p" className="subline">
-              Progressively enhance your React website with WebGL using
-              r3f-scroll-rig, React Three Fiber and Three.js
+              Step into a hidden sanctuary where nature and imagination
+              converge.
             </BodyCopy>
           </div>
         </header>
         <section className="container">
           <Image
-            src="images/k-auto.png"
+            src="images/nature1.png"
+            // src="images/maxim-berg-1_U2RcHnSjc-unsplash.jpg"
+            className="ImageLandscape"
+          />
+          <Image
+            src="images/nature2.png"
+            // src="images/maxim-berg-1_U2RcHnSjc-unsplash.jpg"
+            className="ImageLandscape"
+          />
+          <Image
+            src="images/nature3.png"
             // src="images/maxim-berg-1_U2RcHnSjc-unsplash.jpg"
             className="ImageLandscape"
           />
@@ -137,7 +147,7 @@ export default function App() {
           </p>
         </section>
         <footer>
-          <CodropsFrame />
+          <EffectsToggle setEnabled={setEnabled} enabled={enabled} />
         </footer>
       </article>
 

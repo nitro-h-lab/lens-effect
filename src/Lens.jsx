@@ -32,7 +32,8 @@ export function Lens({ children, damping = 0.14, ...props }) {
     // The following code will render that scene into a buffer, whose texture will then be fed into
     // a plane spanning the full screen and the lens transmission material
     state.gl.setRenderTarget(buffer);
-    state.gl.setClearColor("#ecedef");
+    // state.gl.setClearColor("#ecedef");
+    state.gl.setClearColor("white");
     state.gl.render(scene, state.camera);
     state.gl.setRenderTarget(null);
   });
@@ -55,11 +56,12 @@ export function Lens({ children, damping = 0.14, ...props }) {
           buffer={buffer.texture}
           ior={1.14}
           thickness={1.4}
-          anisotropy={0.14}
-          chromaticAberration={0.14}
+          anisotropy={0.05}
+          chromaticAberration={0.03} // Increased to enhance color separation
           distortion={0.14}
           distortionScale={1.4}
           temporalDistortion={0.14}
+          // color={new THREE.Color(0xff0000)} // Apply a red tint to the material
         />
       </mesh>
     </>

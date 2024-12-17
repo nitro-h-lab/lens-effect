@@ -17,12 +17,13 @@ html {
   overscroll-behavior: contain;
   font-size: max(0.75rem, 0.8101851852vw);
 
-  color: #6e6bcd;
-  background: #ecedef;
+  /* color: #6e6bcd; */
+  color: #2a4e43;
+  background: #08235a;
 }
 
 ::selection {
-  background: rgba(110, 107, 205, 0.5);
+  background: rgba(102, 100, 152, 0.5);
 }
 
 body {
@@ -43,6 +44,8 @@ body,
 .container {
   padding-left: max(1.2rem, 40/1440 * 100vw);
   padding-right: max(1.2rem, 40/1440 * 100vw);
+  display: grid;
+  gap: 2rem;
 }
 
 article {
@@ -54,13 +57,13 @@ section {
 }
 
 header {
-  height: 40vh;
-  max-height: 50vw;
-  display: flex;
+  /* height: 40vh; */
+  /* max-height: 50vw; */
+  /* display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: start;
-  margin-bottom: max(2.5rem, 5vw);
+  margin-bottom: max(2.5rem, 5vw); */
 }
 .headerLayout {
   position: relative;
@@ -88,6 +91,7 @@ h2 span {
   width: 80%;
   margin-left: 0;
 }
+
 @media screen and (min-width: 64em) {
   .subline {
     position: absolute;
